@@ -1,0 +1,29 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputDocument",
+      "databaseName": "databasenico",
+      "collectionName": "containernico",
+      "createIfNotExists": false,
+      "connectionStringSetting": "CosmosDbConnectionString1"
+    }
+  ],
+  "scriptFile": "../dist/Http-azure-function-nico/index.js"
+}
